@@ -1,19 +1,22 @@
 import React from 'react'
+import logo from './Assets/download (1).jpg'
 
 export const Header = () => {
   return (
     <div>
-        <div>
-            <nav>
-                <h3>LOgo</h3>
-                <ul>
+        <div className='navbar fixed top-0 left-0 w-full z-10 bg-white border-8 border-black'>
+            <nav className='flex border-4 border-red-200 h-[55px] justify-around items-center'>
+                <img className='w-[60px] rounded-[50%] h=[60px]' src={logo} alt='logo'/>
+                <ul className='flex gap-10'>
                     <li>Home</li>
                     <li>About</li>
                     <li> Contact</li>
                 </ul>
-                <button>Login</button>
+                <button className='bg-red-700 p-[5px] text-white'>Login</button>
             </nav>
         </div>
+
+       
     </div>
   )
 }
