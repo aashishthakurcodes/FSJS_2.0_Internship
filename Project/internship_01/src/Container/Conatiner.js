@@ -11,15 +11,16 @@ const Conatiner = () => {
         })
     },[])
   return (
-    <div className=''>
-        <div className='container mt-[75px] flex flex-wrap'>
+    <div className='w-full border-green-800 border-8 flex justify-center items-center'>
+        <div className='containerw-full mt-[75px] flex flex-wrap  justify-around gap-[30px] border-4 border-red-700 '>
             {Data.map((results)=>(
 
-                 <div key={results.id} className=' w-[250px] border-black border-8'>
+                 <div key={results.id} className=' w-[300px] border-black border-8 p-[2px]'>
                  <img className='' src={`https://image.tmdb.org/t/p/w500${results.poster_path}`} alt='bg img'/>
                  <h2>
                   {results.original_title}
                  </h2>
+                 <h3>Ratings {results.vote_average} ⭐</h3>
              </div>
 
 ))}
