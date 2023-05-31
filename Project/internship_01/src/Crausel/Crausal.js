@@ -34,8 +34,9 @@ const Crausal = () => {
   const isMobileDevice = /Mobi/i.test(window.navigator.userAgent);
 
   return (
-    <div className="border-red-700 border-8">
+    <div className="border-red-700 border-8 mt-[75px] flex justify-center ">
       <Carousel
+      className=" flex flex-col justify-center items-center border-green-700 border-8 "
         responsive={responsive}
         swipeable={false}
         draggable={false}
@@ -47,11 +48,11 @@ const Crausal = () => {
         {myData.map((results) => (
           <div
             key={results.id}
-            className=" w-[800px] h-[400px]border-black border-8 p-[2px]"
+            className=" w-[600px]   border-black border-8 p-[2px] flex flex-col justify-center items-center"
           >
             <img
               className="w-full"
-              src={`https://image.tmdb.org/t/p/w500${results.poster_path}`}
+              src={`https://image.tmdb.org/t/p/w500${results.backdrop_path}`}
               alt="bg img"
             />
             <h2>{results.original_title}</h2>
@@ -60,7 +61,7 @@ const Crausal = () => {
         ))}
       
       </Carousel>
-      ;
+      
     </div>
   );
 };
