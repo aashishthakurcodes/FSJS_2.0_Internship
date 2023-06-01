@@ -34,36 +34,46 @@ const Crausal = () => {
   const isMobileDevice = /Mobi/i.test(window.navigator.userAgent);
 
   return (
-    <div className="border-red-700 border-8 mt-[75px] flex justify-center ">
-      <Carousel
-      className=" flex flex-col justify-center items-center border-green-700 border-8 "
-        responsive={responsive}
-        swipeable={false}
-        draggable={false}
-        showDots={true}
-        // autoPlaySpeed={3000}
-        // autoPlay={!isMobileDevice}
-      >
+    <div className=" mt-[75px] ">
        
-        {myData.map((results) => (
-          <div
-            key={results.id}
-            className=" w-[600px]   border-black border-8 p-[2px] flex flex-col justify-center items-center"
-          >
-            <img
-              className="w-full"
-              src={`https://image.tmdb.org/t/p/w500${results.backdrop_path}`}
-              alt="bg img"
-            />
-            <h2>{results.original_title}</h2>
-            <h3>Ratings {results.vote_average} ⭐</h3>
-          </div>
-        ))}
-      
-      </Carousel>
+       <Carousel
+className=" "
+responsive={responsive}
+swipeable={false}
+draggable={false}
+showDots={true}
+autoPlaySpeed={5000}
+autoPlay={!isMobileDevice}
+>
+
+{myData.map((results) => (
+  <div className="flex justify-center items-center">
+  <div
+    key={results.id}
+    className=" w-[900px] h-[510px]  p-[2px] mb-[15px]  flex flex-col justify-center items-center"
+  >
+    <div className="flex flex-col justify-center items-center h-full w-full">
+    <img
+      className="w-[100%] h-[90%]"
+      src={`https://image.tmdb.org/t/p/w500${results.backdrop_path}`}
+      alt="bg img"
+    />
+   
+    <h2>{results.original_title}</h2>
+    <h3>Ratings {results.vote_average} ⭐</h3>
+  </div>
+  </div>
+  </div>
+))}
+
+
+</Carousel>
+     
       
     </div>
   );
 };
 
 export default Crausal;
+
+
