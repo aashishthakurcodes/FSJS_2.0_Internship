@@ -42,8 +42,8 @@ responsive={responsive}
 swipeable={false}
 draggable={false}
 showDots={true}
-autoPlaySpeed={5000}
-autoPlay={!isMobileDevice}
+// autoPlaySpeed={5000}
+// autoPlay={!isMobileDevice}
 >
 
 {myData.map((results) => (
