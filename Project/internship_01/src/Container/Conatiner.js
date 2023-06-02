@@ -13,7 +13,7 @@ const Conatiner = () => {
   }, []);
   return (
     <div className="w-full border-green-800 border-8 flex justify-center items-center">
-      <div className="containerw-full mt-[10px] flex flex-wrap  justify-around gap-[30px] border-4 border-red-700 ">
+      <div className="containerw-full mt-[10px] flex flex-wrap  justify-around gap-[30px] border-4  ">
         {Data.map((results) => (
           <div
             key={results.id}
