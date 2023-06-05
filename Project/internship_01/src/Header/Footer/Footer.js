@@ -4,7 +4,8 @@ const Footer = () => {
   return (
     <div>
         <footer>
-            <h2>Fotter part</h2>
+            <h1>Fotter part</h1>
+            <p>This is footer section</p>
         </footer>
 
     </div>
