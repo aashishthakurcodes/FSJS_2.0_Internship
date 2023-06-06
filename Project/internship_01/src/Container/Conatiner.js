@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Conatiner = () => {
   const [Data, Setdata] = useState([]);
@@ -14,7 +15,8 @@ const Conatiner = () => {
   return (
     <div className="w-full border-green-800 border-8 flex justify-center items-center">
       <div className="containerw-full mt-[10px] flex flex-wrap  justify-around gap-[30px] border-4  ">
-        {Data.map((results) => (
+      {Data.map((results) => (
+        <Link>
           <div
             key={results.id}
             className=" w-[300px] border-black border-8 p-[2px]"
@@ -27,6 +29,7 @@ const Conatiner = () => {
             <h2>{results.original_title}</h2>
             <h3>Ratings {results.vote_average} ⭐</h3>
           </div>
+         </Link>
         ))}
       </div>
     </div>
