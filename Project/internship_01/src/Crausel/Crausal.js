@@ -1,9 +1,12 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import React, { useEffect, useState } from "react";
+import CrausalShimmer from "../Shimmer/CrausalShimmer";
 
 const Crausal = () => {
   const [myData, Setdata] = useState([]);
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     fetch(
       "https://api.themoviedb.org/3/movie/popular?api_key=db9c8f6101242bb4f50b946dd0fc7571"
@@ -11,6 +14,7 @@ const Crausal = () => {
       .then((response) => response.json())
       .then((api) => {
         Setdata(api.results);
+        setLoading(false);
       });
   }, []);
 
@@ -31,49 +35,38 @@ const Crausal = () => {
       slidesToSlide: 1, // optional, default to 1.
     },
   };
-  const isMobileDevice = /Mobi/i.test(window.navigator.userAgent);
+
+  if (loading) {
+    return <CrausalShimmer />; // Render shimmer component while loading
+  }
 
   return (
-    <div className=" mt-[75px] ">
-       
-       <Carousel
-className=" "
-responsive={responsive}
-swipeable={false}
-draggable={false}
-showDots={true}
-// autoPlaySpeed={5000}
-// autoPlay={!isMobileDevice}
->
-
-{myData.map((results) => (
-  <div className="flex justify-center items-center">
-  <div
-    key={results.id}
-    className=" w-[900px] h-[510px]  p-[2px] mb-[15px]  flex flex-col justify-center items-center"
-  >
-    <div className="flex flex-col justify-center items-center h-full w-full">
-    <img
-      className="w-[100%] h-[90%]"
-      src={`https://image.tmdb.org/t/p/w500${results.backdrop_path}`}
-      alt="bg img"
-    />
-   
-    <h2>{results.original_title}</h2>
-    <h3>Ratings {results.vote_average} ⭐</h3>
-  </div>
-  </div>
-  </div>
-))}
-
-
-</Carousel>
-     
-      
+    <div className="mt-[75px]">
+      <Carousel
+        className=""
+        responsive={responsive}
+        swipeable={false}
+        draggable={false}
+        showDots={true}
+      >
+        {myData.map((results) => (
+          <div className="flex justify-center items-center" key={results.id}>
+            <div className="w-[900px] h-[510px] p-[2px] mb-[15px] flex flex-col justify-center items-center">
+              <div className="flex flex-col justify-center items-center h-full w-full">
+                <img
+                  className="w-[100%] h-[90%]"
+                  src={`https://image.tmdb.org/t/p/w500${results.backdrop_path}`}
+                  alt="bg img"
+                />
+                <h2>{results.original_title}</h2>
+                <h3>Ratings {results.vote_average} ⭐</h3>
+              </div>
+            </div>
+          </div>
+        ))}
+      </Carousel>
     </div>
   );
 };
 
 export default Crausal;
-
-

@@ -31,13 +31,13 @@ const Conatiner = () => {
   }, []);
 
   const[input, setInput]=useState('');
-  // const[data, setData]=useState([])
+ 
   const handleclick=()=>{
     fetch(`https://api.themoviedb.org/3/search/movie?query=${input}&api_key=db9c8f6101242bb4f50b946dd0fc7571`)
       .then((res) => res.json())
       .then((datac) => {
         Setdata(datac.results);
-        // console.log(setData);
+      
       })
   }
   return (
