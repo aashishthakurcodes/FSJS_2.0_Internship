@@ -29,8 +29,30 @@ const Conatiner = () => {
     }
     getData()
   }, []);
+
+  const[input, setInput]=useState('');
+  // const[data, setData]=useState([])
+  const handleclick=()=>{
+    fetch(`https://api.themoviedb.org/3/search/movie?query=${input}&api_key=db9c8f6101242bb4f50b946dd0fc7571`)
+      .then((res) => res.json())
+      .then((datac) => {
+        Setdata(datac.results);
+        // console.log(setData);
+      })
+  }
   return (
     <div className="w-full border-green-800 border-8 flex flex-col justify-center items-center">
+      
+      <div className="flex w-[40%] mt-[10px] gap-[10px] items-center justify-center border-red-300 border-4 p-[10px]">
+        <input className="px-3 h-[35px] flex placeholder-slate-300 text-slate-600 relative bg-white bg-white rounded text-sm border border-slate-300 outline-none focus:outline-none focus:ring w-full pr-10" placeholder='ENTER SOME DATA' value={input}  onChange={(e) => setInput(e.target.value)}/>
+        
+        <button class="relative inline-flex items-center justify-center h-[35px] p-0.5  mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800" onClick={handleclick}>
+  <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+      Search
+  </span>
+</button>
+        
+      </div>
      <div className='flex justify-center gap-[30px] border-red-300 border-8 '>
         <button onClick={() => handleClick('Action')} className='p-[5px] border-4 border-green-300'>
           Action
@@ -66,7 +88,6 @@ const Conatiner = () => {
             />
             <h2>{res.original_title}</h2>
             <h3>Ratings {res.vote_average} ⭐</h3>
-         
           </div>
 
         ))}
