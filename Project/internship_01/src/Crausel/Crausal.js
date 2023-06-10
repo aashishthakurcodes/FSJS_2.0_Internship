@@ -51,16 +51,18 @@ const Crausal = () => {
       >
         {myData.map((results) => (
           <div className="flex justify-center items-center" key={results.id}>
-            <div className="w-[900px] h-[510px] p-[2px] mb-[15px] flex flex-col justify-center items-center">
-              <div className="flex flex-col justify-center items-center h-full w-full">
+            <div className="w-[900px] h-[510px] p-[2px] relative mb-[25px] flex flex-col justify-end items-baseline border-4 border-red-600">
+              
                 <img
-                  className="w-[100%] h-[90%]"
+                  className="w-[100%] h-[100%] "
                   src={`https://image.tmdb.org/t/p/w500${results.backdrop_path}`}
                   alt="bg img"
                 />
-                <h2>{results.original_title}</h2>
+                <div className="absolute w-full border-4 border-red-800 flex flex-col justify-center text-center items-center text-slate-200 bg-black bg-opacity-60">
+                <h2 >{results.original_title}</h2>
                 <h3>Ratings {results.vote_average} ⭐</h3>
-              </div>
+                </div>
+             
             </div>
           </div>
         ))}

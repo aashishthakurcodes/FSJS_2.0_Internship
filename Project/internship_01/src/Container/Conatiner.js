@@ -5,6 +5,8 @@ import Result from "../Shimmer/Result";
 const Conatiner = () => {
   const [Data, Setdata] = useState([]); //container variables
   const [error, setError] = useState(false); //Error varaiabls
+  //Input user data
+  const [input, setInput] = useState("");
 
   //Handle click function execute by taking user value
   const handleClick = async (value) => {
@@ -20,6 +22,7 @@ const Conatiner = () => {
         setError(false);
         Setdata(data.results);
       }
+      setInput("");
     } catch (error) {
       console.log(error);
     }
@@ -37,9 +40,6 @@ const Conatiner = () => {
     getData();
   }, []);
 
-  //Input user data
-  const [input, setInput] = useState("");
-
   //User data
   const handleclick = () => {
     fetch(
@@ -55,7 +55,7 @@ const Conatiner = () => {
           setError(false);
         }
       })
-       .catch((error) => {
+      .catch((error) => {
         // console.error(error);
         alert(error);
       });
@@ -79,8 +79,6 @@ const Conatiner = () => {
             Search
           </span>
         </button>
-
-        
       </div>
       <div className="flex justify-center gap-[30px] border-red-300 border-8 ">
         <button
