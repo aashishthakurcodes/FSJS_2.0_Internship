@@ -51,7 +51,7 @@ const Crausal = () => {
       >
         {myData.map((results) => (
           <div className="flex justify-center items-center" key={results.id}>
-            <div className="w-[900px] h-[510px] p-[2px] relative mb-[25px] flex flex-col justify-end items-baseline border-4 border-red-600">
+            <div className="w-[900px] h-[510px] p-[2px] relative mb-[25px] flex flex-col justify-end items-baseline border-4 border-red-600 sm:border-8 border-pink-800 w-[90%] h-[250px]">
               
                 <img
                   className="w-[100%] h-[100%] "
