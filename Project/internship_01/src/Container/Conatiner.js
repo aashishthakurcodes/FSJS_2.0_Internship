@@ -62,17 +62,17 @@ const Conatiner = () => {
   };
 
   return (
-    <div className="w-full border-green-800 border-8 flex flex-col justify-center items-center">
+    <div className="w-full border-green-800 border-8 flex flex-col justify-center items-center bg-black text-white ">
       <div className="flex w-[40%] mt-[10px] gap-[10px] items-center justify-center border-red-300 border-4 p-[10px]">
         <input
-          className="px-3 h-[35px] flex placeholder-slate-300 text-slate-600 relative bg-white bg-white rounded text-sm border border-slate-300 outline-none focus:outline-none focus:ring w-full pr-10"
-          placeholder="ENTER SOME DATA"
+          className="px-3 italic h-[35px] flex placeholder-slate-300 text-slate-600 relative bg-white bg-white rounded text-sm border border-slate-300 outline-none focus:outline-none focus:ring w-full pr-10 border"
+          placeholder="Search your favourite movie.."
           value={input}
           onChange={(e) => setInput(e.target.value)}
         />
 
         <button
-          class="relative inline-flex items-center justify-center h-[35px] p-0.5  mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800"
+          class="relative inline-flex items-center justify-center h-[35px] p-0.5  mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 "
           onClick={handleclick}
         >
           <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
@@ -80,53 +80,59 @@ const Conatiner = () => {
           </span>
         </button>
       </div>
-      <div className="flex justify-center gap-[30px] border-red-300 border-8 ">
+      <div className="flex justify-center gap-[30px] p-[20px] sm:w-[20px] gap-[10px] border-4 border-red-500  ">
         <button
           onClick={() => handleClick("Action")}
-          className="p-[5px] border-4 border-green-300"
-        >
-          Action
+          class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800">
+          <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+         Action
+          </span>
         </button>
         <button
-          onClick={() => handleClick("Comedy")}
-          className="p-[5px] border-4 border-green-300"
-        >
+           class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800">
+           <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
           Comedy
+           </span>
         </button>
         <button
           onClick={() => handleClick("Adventure")}
-          className="p-[5px] border-4 border-green-300"
-        >
-          Adventure
+          class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800">
+          <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+             Adventure
+          </span>
         </button>
         <button
           onClick={() => handleClick("Horror")}
-          className="p-[5px] border-4 border-green-300"
-        >
-          Horror
+          class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800">
+          <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+             Horror
+          </span>
         </button>
         <button
-          onClick={() => handleClick("Drama")}
-          className="p-[5px] border-4 border-green-300"
-        >
-          Drama
+          onClick={() => handleClick("Marvel")}
+          class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800">
+          <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+             Marvel
+          </span>
         </button>
       </div>
 
       {error && <Result />}
-      <div className="containerw-full mt-[10px] flex flex-wrap  justify-around gap-[30px] border-4  ">
+      <div className="containerw-full mt-[10px] flex flex-wrap  justify-around gap-[30px] border-4 ">
         {Data?.map((res) => (
           <div
             key={res.id}
-            className=" w-[300px] border-black border-8 p-[2px]"
+            className=" w-[300px] border-white border-4 p-[2px]"
           >
             <img
               className=""
               src={`https://image.tmdb.org/t/p/w500${res.poster_path}`}
               alt="bg img"
             />
+            <div className=" bg-black bg-opacity-20 p-[5px]">
             <h2>{res.original_title}</h2>
             <h3>Ratings {res.vote_average} ⭐</h3>
+            </div>
           </div>
         ))}
       </div>

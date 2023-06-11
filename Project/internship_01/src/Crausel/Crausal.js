@@ -50,19 +50,17 @@ const Crausal = () => {
         showDots={true}
       >
         {myData.map((results) => (
-          <div className="flex justify-center items-center" key={results.id}>
-            <div className="w-[900px] h-[510px] p-[2px] relative mb-[25px] flex flex-col justify-end items-baseline border-4 border-red-600 sm:border-8 border-pink-800 w-[90%] h-[250px]">
-              
-                <img
-                  className="w-[100%] h-[100%] "
-                  src={`https://image.tmdb.org/t/p/w500${results.backdrop_path}`}
-                  alt="bg img"
-                />
-                <div className="absolute w-full border-4 border-red-800 flex flex-col justify-center text-center items-center text-slate-200 bg-black bg-opacity-60">
-                <h2 >{results.original_title}</h2>
-                <h3>Ratings {results.vote_average} ⭐</h3>
-                </div>
-             
+          <div className="flex justify-center items-center bg-black " key={results.id} >
+            <div className="w-[900px] h-[510px] p-[5px] relative mb-[25px] flex flex-col justify-end items-baseline  sm: w-[92%] h-[220px] shadow-2xl">
+              <img
+                className="w-[100%] h-[100%] "
+                src={`https://image.tmdb.org/t/p/w500${results.backdrop_path}`}
+                alt="bg img"
+              />
+              <div className="absolute w-[99.5%] p-[5px]  flex flex-col justify-center text-center items-center text-slate-200 bg-black bg-opacity-60 ">
+                <h1 className="font-serif">{results.original_title}</h1>
+                <h3 className="font-serif">Ratings {results.vote_average} ⭐</h3>
+              </div>
             </div>
           </div>
         ))}
