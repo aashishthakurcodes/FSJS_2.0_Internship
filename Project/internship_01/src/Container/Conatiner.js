@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Result from "../Shimmer/Result";
+import { Link } from "react-router-dom";
 
 
 const Conatiner = () => {
@@ -127,13 +128,14 @@ const Conatiner = () => {
 </div>
 
       {error && <Result />}
-      <div className="containerw-full mt-[10px] flex flex-wrap  justify-around gap-[30px] border-4 ">
+      <div className="containerw-full mt-[10px] flex flex-wrap  justify-around gap-[30px] border-4  " >
         {Data?.map((res) => (
+          <Link to={"/moreinfo/"+ res.id}>
           <div
             key={res.id}
             className=" w-[300px] border-white border-4 p-[2px]"
           >
-            <img
+           <img
               className=""
               src={`https://image.tmdb.org/t/p/w500${res.poster_path}`}
               alt="bg img"
@@ -143,6 +145,7 @@ const Conatiner = () => {
             <h3>Ratings {res.vote_average} ⭐</h3>
             </div>
           </div>
+          </Link>
         ))}
       </div>
     </div>

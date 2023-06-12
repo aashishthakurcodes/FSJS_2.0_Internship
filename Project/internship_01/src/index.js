@@ -8,6 +8,7 @@ import Conatiner from "./Container/Conatiner";
 import About from "./About/About";
 import RouterError from "./Shimmer/Routererror";
 import Contact from "./Contactus/Contact";
+import Moreinfo from "./MoreInfo/Moreinfo";
 
 
 const Home=()=>{
@@ -39,6 +40,10 @@ const appRouter = createBrowserRouter([
         path: "/contact",
         element: <Contact />,
       },
+      {
+        path:"/moreinfo/:id",
+        element:<Moreinfo/>
+      }
     ],
   },
 ]);
