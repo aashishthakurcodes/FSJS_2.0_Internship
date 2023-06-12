@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Result from "../Shimmer/Result";
 
+
 const Conatiner = () => {
   const [Data, Setdata] = useState([]); //container variables
   const [error, setError] = useState(false); //Error varaiabls
@@ -62,7 +63,9 @@ const Conatiner = () => {
   };
 
   return (
+
     <div className="w-full border-green-800 border-8 flex flex-col justify-center items-center bg-black text-white ">
+      
      <div className="flex flex-col md:flex-row w-full md:w-[30%] mt-2 md:mt-[10px] md:gap-2 items-center justify-center border-red-300 border-4 p-2 md:p-[10px]">
   <input
     className="px-3 italic h-10 md:h-[35px] flex placeholder-slate-300 text-slate-600 relative bg-white rounded text-sm border border-slate-300 outline-none focus:outline-none focus:ring w-full pr-10 sm:w-54 md:w-full"

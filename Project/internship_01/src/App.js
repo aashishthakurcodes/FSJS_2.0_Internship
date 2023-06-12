@@ -1,18 +1,19 @@
 
 import Header from "./Header/Header";
-import Conatiner from "./Container/Conatiner";
-import Crausal from "./Crausel/Crausal";
+// import Conatiner from "./Container/Conatiner";
+// import Crausal from "./Crausel/Crausal";
+import {Outlet} from "react-router-dom";
 
 
-function App() {
+const App=()=> {
   return (
     <div >
      <Header/>
-     <Crausal/>
-     <Conatiner/>
+     <Outlet/>
     </div>
   );
 }
+
 
 export default App;
 

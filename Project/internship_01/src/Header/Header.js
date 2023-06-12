@@ -9,10 +9,14 @@ export const Header = () => {
             <nav className='flex border-4 border-red-200 h-[55px] justify-around items-center'>
                 <img className='w-[60px] rounded-[50%] h=[60px]' src={logo} alt='logo'/>
                 <ul className='flex gap-10'>
+                  <Link to={"/"}>
                     <li>Home</li>
-                    <Link to={"/About"}>
+                    </Link>
+                    <Link to={"/about"}>
                     <li>About</li></Link>
+                    <Link to={"/contact"}>
                     <li> Contact</li>
+                    </Link>
                 </ul>
                 <button className='bg-red-700 p-[5px] text-white'>Login</button>
             </nav>

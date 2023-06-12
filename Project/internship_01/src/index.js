@@ -1,34 +1,47 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import { createBrowserRouter,RouterProvider} from "react-router-dom";
-import Conatiner from './Container/Conatiner';
-import About from './About/About';
+// import React, { Children } from 'react';
+import Crausal from "./Crausel/Crausal";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Conatiner from "./Container/Conatiner";
+import About from "./About/About";
+import RouterError from "./Shimmer/Routererror";
+import Contact from "./Contactus/Contact";
 
 
-const appRouter=createBrowserRouter([
+const Home=()=>{
+  return(
+    <>
+    <Crausal/>
+    <Conatiner/>,
+    
+    </>
+  )
+}
+
+const appRouter = createBrowserRouter([
   {
-    path:'/',
-    element:<App/>,
-    children:[
+    path: "/",
+    element: <App />,
+    errorElement: <RouterError />,
+    children: [
       {
-        path:'/',
-        element:<Conatiner/>
+        path: "/",
+        element: <Home />,
       },
-      {
-        path:'/about',
-        element:<About/>
-      },
-      
-    ]
-   
-  },
-  
-     
- 
-  
-])
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<RouterProvider router={appRouter}/>);
+      {
+        path: "/about",
+        element: <About />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
+      },
+    ],
+  },
+]);
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<RouterProvider router={appRouter} />);
