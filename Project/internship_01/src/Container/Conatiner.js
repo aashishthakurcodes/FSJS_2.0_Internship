@@ -63,59 +63,65 @@ const Conatiner = () => {
 
   return (
     <div className="w-full border-green-800 border-8 flex flex-col justify-center items-center bg-black text-white ">
-      <div className="flex w-[40%] mt-[10px] gap-[10px] items-center justify-center border-red-300 border-4 p-[10px]">
-        <input
-          className="px-3 italic h-[35px] flex placeholder-slate-300 text-slate-600 relative bg-white bg-white rounded text-sm border border-slate-300 outline-none focus:outline-none focus:ring w-full pr-10 border"
-          placeholder="Search your favourite movie.."
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-        />
+     <div className="flex flex-col md:flex-row w-full md:w-[30%] mt-2 md:mt-[10px] md:gap-2 items-center justify-center border-red-300 border-4 p-2 md:p-[10px]">
+  <input
+    className="px-3 italic h-10 md:h-[35px] flex placeholder-slate-300 text-slate-600 relative bg-white rounded text-sm border border-slate-300 outline-none focus:outline-none focus:ring w-full pr-10 sm:w-54 md:w-full"
+    placeholder="Search your favorite movie.."
+    value={input}
+    onChange={(e) => setInput(e.target.value)}
+  />
 
-        <button
-          class="relative inline-flex items-center justify-center h-[35px] p-0.5  mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 "
-          onClick={handleclick}
-        >
-          <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-            Search
-          </span>
-        </button>
-      </div>
-      <div className="flex justify-center gap-[30px] p-[20px]  ">
-        <button
-          onClick={() => handleClick("Action")}
-          class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800">
-          <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-         Action
-          </span>
-        </button>
-        <button
-           class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800">
-           <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-          Comedy
-           </span>
-        </button>
-        <button
-          onClick={() => handleClick("Adventure")}
-          class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800">
-          <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-             Adventure
-          </span>
-        </button>
-        <button
-          onClick={() => handleClick("Horror")}
-          class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800">
-          <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-             Horror
-          </span>
-        </button>
-        <button
-          onClick={() => handleClick("Marvel")}
-          class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800">
-          <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-             Marvel
-          </span>
-        </button>
-      </div>
+  <button
+    className="relative inline-flex items-center justify-center h-10 md:h-[35px] p-0.5 md:mr-2  overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 m-2 sm:mt-0" 
+    onClick={handleclick}
+  >
+    <span className="relative  px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+      Search
+    </span>
+  </button>
+</div>
+
+<div className="flex flex-wrap justify-center gap-2 p-2 sm:p-4 md:p-6 lg:p-8">
+  <button
+    onClick={() => handleClick("Action")}
+    className="relative inline-flex items-center justify-center p-0.5 mb-2 md:mb-0 md:mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800"
+  >
+    <span className="relative px-4 py-2 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+      Action
+    </span>
+  </button>
+  <button
+    className="relative inline-flex items-center justify-center p-0.5 mb-2 md:mb-0 md:mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800"
+  >
+    <span className="relative px-4 py-2 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+      Comedy
+    </span>
+  </button>
+  <button
+    onClick={() => handleClick("Adventure")}
+    className="relative inline-flex items-center justify-center p-0.5 mb-2 md:mb-0 md:mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800"
+  >
+    <span className="relative px-4 py-2 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+      Adventure
+    </span>
+  </button>
+  <button
+    onClick={() => handleClick("Horror")}
+    className="relative inline-flex items-center justify-center p-0.5 mb-2 md:mb-0 md:mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800"
+  >
+    <span className="relative px-4 py-2 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+      Horror
+    </span>
+  </button>
+  <button
+    onClick={() => handleClick("Marvel")}
+    className="relative inline-flex items-center justify-center p-0.5 mb-2 md:mb-0 md:mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800"
+  >
+    <span className="relative px-4 py-2 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+      Marvel
+    </span>
+  </button>
+</div>
 
       {error && <Result />}
       <div className="containerw-full mt-[10px] flex flex-wrap  justify-around gap-[30px] border-4 ">

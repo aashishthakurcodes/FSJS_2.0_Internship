@@ -50,19 +50,20 @@ const Crausal = () => {
         showDots={true}
       >
         {myData.map((results) => (
-          <div className="flex justify-center items-center bg-black " key={results.id} >
-            <div className="w-[900px] h-[510px] p-[5px] relative mb-[25px] flex flex-col justify-end items-baseline  sm: w-[92%] h-[220px] shadow-2xl">
-              <img
-                className="w-[100%] h-[100%] "
-                src={`https://image.tmdb.org/t/p/w500${results.backdrop_path}`}
-                alt="bg img"
-              />
-              <div className="absolute w-[99.5%] p-[5px]  flex flex-col justify-center text-center items-center text-slate-200 bg-black bg-opacity-60 ">
-                <h1 className="font-serif">{results.original_title}</h1>
-                <h3 className="font-serif">Ratings {results.vote_average} ⭐</h3>
-              </div>
+          <div className="flex justify-center items-center bg-black" key={results.id}>
+          <div className="w-full md:w-[900px] h-[410px] p-2 md:p-5 relative mb-5 md:mb-25 flex flex-col justify-end items-center shadow-2xl border-4 border-white-600 rounded-xl">
+            <img
+              className="w-full h-full"
+              src={`https://image.tmdb.org/t/p/w500${results.backdrop_path}`}
+              alt="bg img"
+            />
+            <div className="absolute w-full p-2 md:p-5 flex flex-col justify-center text-center items-center text-slate-200 bg-black bg-opacity-60">
+              <h1 className="font-serif text-lg md:text-2xl">{results.original_title}</h1>
+              <h3 className="font-serif text-sm md:text-lg">Ratings {results.vote_average} ⭐</h3>
             </div>
           </div>
+        </div>
+        
         ))}
       </Carousel>
     </div>
