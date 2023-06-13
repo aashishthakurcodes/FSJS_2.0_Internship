@@ -73,6 +73,7 @@ const Conatiner = () => {
     placeholder="Search your favorite movie.."
     value={input}
     onChange={(e) => setInput(e.target.value)}
+    
   />
 
   <button

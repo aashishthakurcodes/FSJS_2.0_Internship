@@ -9,6 +9,7 @@ import About from "./About/About";
 import RouterError from "./Shimmer/Routererror";
 import Contact from "./Contactus/Contact";
 import Moreinfo from "./MoreInfo/Moreinfo";
+import "./MoreInfo/Info.css"
 
 
 const Home=()=>{
