@@ -1,14 +1,28 @@
 import React from 'react'
-import logo from './Assets/img2.jpg'
-import { Link } from 'react-router-dom'
+import logo from './Assets/download (1).jpg'
+import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 
 export const Header = () => {
+  const [scroll ,setScroll]=useState(false);
+  const handleScroll=()=>{
+    const offset=window.scrollY;
+    if(offset>800){
+      setScroll(true)
+    }else{
+      setScroll(false)
+    }
+  }
+useEffect(()=>{
+  window.addEventListener("scroll",handleScroll)
+},[])
+
   return (
-    <div>
-        <div className='navbar fixed top-0 left-0 w-full z-10 bg-white border-8 border-black'>
-            <nav className='flex border-4 border-red-200 h-[55px] justify-around items-center'>
-                <img className='w-[60px] rounded-[50%] h=[60px]' src={logo} alt='logo'/>
-                <ul className='flex gap-10'>
+    <div className={`main-header ${scroll ? "sticky-header":" "}`}>
+        <div className='navbar  top-0 left-0 w-full z-10 '>
+            <nav className=' navbar flex  h-[75px] justify-around items-center'>
+                <img className=' w-[80px] rounded-[50%]  h=[42px]' src={logo} alt='logo'/>
+                <ul className='navbar-ul flex gap-10'>
                   <Link to={"/"}>
                     <li>Home</li>
                     </Link>
@@ -18,7 +32,7 @@ export const Header = () => {
                     <li> Contact</li>
                     </Link>
                 </ul>
-                <button className='bg-red-700 p-[5px] text-white'>Login</button>
+                <button className='login bg-red-700 p-[5px] text-white'>Login</button>
             </nav>
         </div>
 

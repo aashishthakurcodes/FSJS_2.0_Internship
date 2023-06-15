@@ -74,10 +74,61 @@
   /* Add any other custom styles to enhance the page */
   
 
+  /* Resposiveness */
+  /* Header */
+  .navbar{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffff;
+    border: 0.5px solid #c805f9;
+  }
+  .sticky-header{
+    position: sticky;
+    top: 0;
+    transform: translateY(-80px);
+    animation: stickyheader 0.8s ease forwards;
+  }
+  @keyframes stickyheader{
+    0% {
+      transform: translateY(-80px);
+    }
+    100%{
+      transform: translateY(0);
+    }
+
+  }
+
+
   /* // Crausal Shimmer */
   .crausal_shimmer{
     background: rgb(182, 180, 180);
     width: 900px;
     height: 410;
     border-radius: 50px;
+  }
+  @media screen and (max-width:480px){
+
+    .crausal_shimmer{
+      width: 500px;
+      height: 250px;
+      background: #000;
+    }
+    .crausal{
+      width: 900px;
+      height: 320px;
+      border: 5px solid red;
+    }
+    .navbar{
+      height: 50px;
+      justify-content: center;
+      gap: 180px;
+      
+    }
+    
+    .navbar img{
+      height: 40px;
+      width: 40px;
+    }
+    .navbar-ul{
+      display: none;
+    }
   }

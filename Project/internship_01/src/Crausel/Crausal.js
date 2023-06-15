@@ -41,7 +41,7 @@ const Crausal = () => {
   }
 
   return (
-    <div className="mt-[75px]">
+    <div className="p-[50px] bg-black ">
       <Carousel
         className=""
         responsive={responsive}
@@ -50,8 +50,8 @@ const Crausal = () => {
         showDots={true}
       >
         {myData.map((results) => (
-          <div className="flex justify-center items-center bg-black" key={results.id}>
-          <div className="w-full md:w-[900px] h-[410px] p-2 md:p-5 relative mb-5 md:mb-25 flex flex-col justify-end items-center shadow-2xl border-4 border-white-600 rounded-xl">
+          <div className="crausal flex border-4 border-red-600 justify-center items-center bg-black" key={results.id}>
+          <div className="  w-[750px] p-[5px] h-[410px]    flex flex-col justify-end items-center shadow-2xl border-2 border-white-600 rounded-xl">
             <img
               className="w-full h-full"
               src={`https://image.tmdb.org/t/p/w500${results.backdrop_path}`}
