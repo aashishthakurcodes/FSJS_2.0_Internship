@@ -1,134 +1,167 @@
 /* Add custom styles to enhance the page */
 
 .container {
-    padding: 20px;
+  padding: 20px;
+}
+
+.fade-enter {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 500ms, transform 500ms;
+}
+
+.slide-effect {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: slide 4s infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-100%);
   }
-  
-  .fade-enter {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  
-  .fade-enter-active {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 500ms, transform 500ms;
-  }
-  
-  .slide-effect {
-    overflow: hidden;
-    white-space: nowrap;
-    animation: slide 4s infinite;
-  }
-  
-  @keyframes slide {
-    0% {
-      transform: translateX(-100%);
-    }
-    25% {
-      transform: translateX(0);
-    }
-    75% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(100%);
-    }
-  }
-  
-  .image-container {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-  }
-  
-  .image-container img {
-    max-width: 100%;
-    height: auto;
-    transform: scale(1);
-    transition: transform 0.5s;
-  }
-  
-  .image-container:hover img {
-    transform: scale(1.1);
-  }
-  
-  .text-container {
-    position: relative;
-    overflow: hidden;
-    transform: translateY(-100%);
-    transition: transform 0.5s;
-  }
-  
-  .text-container:hover {
-    transform: translateY(0);
-  }
-  
- 
-  
-  .fade-p-enter-active {
-    opacity: 1;
+  25% {
     transform: translateX(0);
-    transition: opacity 500ms, transform 1000ms;
   }
-  /* Add any other custom styles to enhance the page */
-  
+  75% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
 
-  /* Resposiveness */
-  /* Header */
-  .navbar{
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #ffff;
-    border: 0.5px solid #c805f9;
-  }
-  .sticky-header{
-    position: sticky;
-    top: 0;
+.image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  transform: scale(1);
+  transition: transform 0.5s;
+}
+
+.image-container:hover img {
+  transform: scale(1.1);
+}
+
+.text-container {
+  position: relative;
+  overflow: hidden;
+  transform: translateY(-100%);
+  transition: transform 0.5s;
+}
+
+.text-container:hover {
+  transform: translateY(0);
+}
+
+.fade-p-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 500ms, transform 1000ms;
+}
+.navbar{
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Add any other custom styles to enhance the page */
+
+
+
+/* Header */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #ffff;
+  /* border: 0.5px solid #c805f9; */
+}
+
+.sticky-header {
+  position: sticky;
+  top: 0;
+  transform: translateY(-80px);
+  animation: stickyheader 0.8s ease forwards;
+}
+@keyframes stickyheader {
+  0% {
     transform: translateY(-80px);
-    animation: stickyheader 0.8s ease forwards;
   }
-  @keyframes stickyheader{
-    0% {
-      transform: translateY(-80px);
-    }
-    100%{
-      transform: translateY(0);
-    }
+  100% {
+    transform: translateY(0);
+  }
+}
 
+/* // Crausal Shimmer */
+.crausal_shimmer {
+  background: rgb(182, 180, 180);
+  width: 900px;
+  height: 410;
+  border-radius: 50px;
+}
+.heading{
+  font-family: "Aboreto";
+}
+.heading2{
+  font-family: "Roboto Slab";
+}
+
+/* Resposiveness */
+
+@media screen and (max-width: 480px) {
+  .crausal_shimmer {
+    width: 500px;
+    height: 250px;
+    background: #000;
+  }
+  .main-crausal {
+    background: #ffff;
+  }
+  .crausal {
+    background: #000;
+    /* border: 5px solid red; */
+    width: 100%;
+    padding: 30px 0px;
+  }
+  .crausal-content {
+    width: 95%;
+    height: 300px;
   }
 
-
-  /* // Crausal Shimmer */
-  .crausal_shimmer{
-    background: rgb(182, 180, 180);
-    width: 900px;
-    height: 410;
-    border-radius: 50px;
+  .navbar {
+    height: 50px;
+    justify-content: space-between;
+    padding: 0 15px;
+    background-color: rgba(0, 0, 0, 0.5);
   }
-  @media screen and (max-width:480px){
 
-    .crausal_shimmer{
-      width: 500px;
-      height: 250px;
-      background: #000;
-    }
-    .crausal{
-      width: 900px;
-      height: 320px;
-      border: 5px solid red;
-    }
-    .navbar{
-      height: 50px;
-      justify-content: center;
-      gap: 180px;
-      
-    }
-    
-    .navbar img{
-      height: 40px;
-      width: 40px;
-    }
-    .navbar-ul{
-      display: none;
-    }
+  .navbar img {
+    height: 40px;
+    width: 40px;
   }
+  .navbar-ul {
+    display: none;
+  }
+  /* Search input */
+  .input_data{
+    width: 80%;
+    height: 25px;
+    color: #000;
+  }
+  .search_div{
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  /* Button */
+  .btn{
+    height: 30px;
+  }
+  /* Container */
+  
+}

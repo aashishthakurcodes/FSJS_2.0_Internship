@@ -3,6 +3,7 @@ import "react-multi-carousel/lib/styles.css";
 import React, { useEffect, useState } from "react";
 import CrausalShimmer from "../Shimmer/CrausalShimmer";
 
+
 const Crausal = () => {
   const [myData, Setdata] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -41,17 +42,17 @@ const Crausal = () => {
   }
 
   return (
-    <div className="p-[50px] bg-black ">
+    <div className="main-crausal  bg-black ">
       <Carousel
         className=""
         responsive={responsive}
         swipeable={false}
         draggable={false}
-        showDots={true}
+        showDots={false}
       >
         {myData.map((results) => (
-          <div className="crausal flex border-4 border-red-600 justify-center items-center bg-black" key={results.id}>
-          <div className="  w-[750px] p-[5px] h-[410px]    flex flex-col justify-end items-center shadow-2xl border-2 border-white-600 rounded-xl">
+          <div className="crausal flex  justify-center items-center p-[50px]  " key={results.id}>
+          <div className="crausal-content  w-[850px] p-[5px] h-[410px]    flex flex-col justify-end items-center shadow-2xl border-2 border-white-600 rounded-xl">
             <img
               className="w-full h-full"
               src={`https://image.tmdb.org/t/p/w500${results.backdrop_path}`}

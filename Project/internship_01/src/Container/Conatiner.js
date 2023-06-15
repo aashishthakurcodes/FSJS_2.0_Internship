@@ -60,17 +60,17 @@ const Conatiner = () => {
   return (
     <div className="w-full border-green-800 border-8 flex flex-col justify-center items-center bg-black text-white ">
       
-     <div className="flex flex-col md:flex-row w-full md:w-[30%] mt-2 md:mt-[10px] md:gap-2 items-center justify-center border-red-300 border-4 p-2 md:p-[10px]">
+     <div className="search_div flex flex-col md:flex-row w-full md:w-[30%] mt-2 md:mt-[10px] md:gap-2 items-center justify-center  p-2 md:p-[10px]">
   <input
-    className="px-3 italic h-10 md:h-[35px] flex placeholder-slate-300 text-slate-600 relative bg-white rounded text-sm border border-slate-300 outline-none focus:outline-none focus:ring w-full pr-10 sm:w-54 md:w-full"
-    placeholder="Search your favorite movie.."
+    className="input_data px-3 italic h-10 md:h-[35px] flex placeholder-slate-600 text-slate-800 relative bg-white rounded text-sm border border-slate-300 outline-none focus:outline-none focus:ring w-full pr-10 sm:w-54 md:w-full"
+    placeholder="Search your favourite movie..."
     value={input}
     onChange={(e) => setInput(e.target.value)}
 
   />
 
   <button
-    className="relative inline-flex items-center justify-center h-10 md:h-[35px] p-0.5 md:mr-2  overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 m-2 sm:mt-0" 
+    className="btn relative inline-flex items-center justify-center h-10 md:h-[35px] p-0.5 md:mr-2  overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 m-2 sm:mt-0" 
     onClick={handleclick}
   >
     <span className="relative  px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
@@ -78,17 +78,20 @@ const Conatiner = () => {
     </span>
   </button>
 </div>
+<div>
+  <h2 className="italic">Categories..</h2></div>
 <div className="flex flex-wrap justify-center gap-2 p-2 sm:p-4 md:p-6 lg:p-8">
+  
   <button
     onClick={() => handleClick("Action")}
-    className="relative inline-flex items-center justify-center p-0.5 mb-2 md:mb-0 md:mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800"
+    className="btn relative inline-flex items-center justify-center p-0.5 mb-2 md:mb-0 md:mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800"
   >
     <span className="relative px-4 py-2 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
       Action
     </span>
   </button>
   <button
-    className="relative inline-flex items-center justify-center p-0.5 mb-2 md:mb-0 md:mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800"
+    className="btn relative inline-flex items-center justify-center p-0.5 mb-2 md:mb-0 md:mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800"
   >
     <span className="relative px-4 py-2 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
       Comedy
@@ -96,7 +99,7 @@ const Conatiner = () => {
   </button>
   <button
     onClick={() => handleClick("Adventure")}
-    className="relative inline-flex items-center justify-center p-0.5 mb-2 md:mb-0 md:mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800"
+    className="btn relative inline-flex items-center justify-center p-0.5 mb-2 md:mb-0 md:mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800"
   >
     <span className="relative px-4 py-2 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
       Adventure
@@ -104,7 +107,7 @@ const Conatiner = () => {
   </button>
   <button
     onClick={() => handleClick("Horror")}
-    className="relative inline-flex items-center justify-center p-0.5 mb-2 md:mb-0 md:mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800"
+    className="btn relative inline-flex items-center justify-center p-0.5 mb-2 md:mb-0 md:mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800"
   >
     <span className="relative px-4 py-2 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
       Horror
@@ -112,7 +115,7 @@ const Conatiner = () => {
   </button>
   <button
     onClick={() => handleClick("Marvel")}
-    className="relative inline-flex items-center justify-center p-0.5 mb-2 md:mb-0 md:mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800"
+    className="btn relative inline-flex items-center justify-center p-0.5 mb-2 md:mb-0 md:mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800"
   >
     <span className="relative px-4 py-2 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
       Marvel
@@ -120,21 +123,21 @@ const Conatiner = () => {
   </button>
 </div>
       {error && <Result />}
-      <div className="containerw-full mt-[10px] flex flex-wrap  justify-around gap-[30px] border-4  " >
+      <div className="container w-full mt-[10px] flex flex-wrap  justify-around gap-[35px]  " >
         {Data?.map((res) => (
           <Link to={"/moreinfo/"+ res.id}>
           <div
             key={res.id}
-            className=" w-[300px] border-white border-4 p-[2px]"
+            className="container_div w-[300px] border-white border-4 p-[2px] rounded-[5px]"
           >
            <img
               className=""
               src={`https://image.tmdb.org/t/p/w500${res.poster_path}`}
               alt="bg img"
             />
-            <div className=" bg-black bg-opacity-20 p-[5px]">
-            <h2>{res.original_title}</h2>
-            <h3>Ratings {res.vote_average} ⭐</h3>
+            <div className=" bg-black bg-opacity-20 p-[5px] flex justify-center items-center flex-col">
+            <h2 className="heading">{res.original_title}</h2>
+            <h3 className="heading2">Ratings {res.vote_average} ⭐</h3>
             </div>
           </div>
           </Link>
