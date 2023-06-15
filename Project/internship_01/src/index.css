@@ -64,16 +64,20 @@
     transform: translateY(0);
   }
   
-  .fade-p-enter {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
+ 
   
   .fade-p-enter-active {
     opacity: 1;
     transform: translateX(0);
-    transition: opacity 800ms, transform 500ms;
+    transition: opacity 500ms, transform 1000ms;
   }
-  
   /* Add any other custom styles to enhance the page */
   
+
+  /* // Crausal Shimmer */
+  .crausal_shimmer{
+    background: rgb(182, 180, 180);
+    width: 900px;
+    height: 410;
+    border-radius: 50px;
+  }

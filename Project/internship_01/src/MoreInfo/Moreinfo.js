@@ -31,7 +31,7 @@ const Moreinfo = () => {
           </div>
         </CSSTransition>
         <CSSTransition in={isLoaded} timeout={500} classNames='fade'>
-          <div className='text-container'>
+          <div className='text-container '>
             <h1 className={`text-4xl font-bold mt-[10px] slide-effect`}>{info.original_title}</h1>
           </div>
         </CSSTransition>

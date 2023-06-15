@@ -2,14 +2,11 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Result from "../Shimmer/Result";
 import { Link } from "react-router-dom";
-
-
 const Conatiner = () => {
   const [Data, Setdata] = useState([]); //container variables
   const [error, setError] = useState(false); //Error varaiabls
   //Input user data
   const [input, setInput] = useState("");
-
   //Handle click function execute by taking user value
   const handleClick = async (value) => {
     try {
@@ -29,7 +26,6 @@ const Conatiner = () => {
       console.log(error);
     }
   };
-
   //Initial Data
   useEffect(() => {
     const getData = async () => {
@@ -41,7 +37,6 @@ const Conatiner = () => {
     };
     getData();
   }, []);
-
   //User data
   const handleclick = () => {
     fetch(
@@ -62,9 +57,7 @@ const Conatiner = () => {
         alert(error);
       });
   };
-
   return (
-
     <div className="w-full border-green-800 border-8 flex flex-col justify-center items-center bg-black text-white ">
       
      <div className="flex flex-col md:flex-row w-full md:w-[30%] mt-2 md:mt-[10px] md:gap-2 items-center justify-center border-red-300 border-4 p-2 md:p-[10px]">
@@ -73,7 +66,7 @@ const Conatiner = () => {
     placeholder="Search your favorite movie.."
     value={input}
     onChange={(e) => setInput(e.target.value)}
-    
+
   />
 
   <button
@@ -85,7 +78,6 @@ const Conatiner = () => {
     </span>
   </button>
 </div>
-
 <div className="flex flex-wrap justify-center gap-2 p-2 sm:p-4 md:p-6 lg:p-8">
   <button
     onClick={() => handleClick("Action")}
@@ -127,7 +119,6 @@ const Conatiner = () => {
     </span>
   </button>
 </div>
-
       {error && <Result />}
       <div className="containerw-full mt-[10px] flex flex-wrap  justify-around gap-[30px] border-4  " >
         {Data?.map((res) => (
@@ -152,5 +143,4 @@ const Conatiner = () => {
     </div>
   );
 };
-
 export default Conatiner;
