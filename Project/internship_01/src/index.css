@@ -112,7 +112,16 @@
 .heading2{
   font-family: "Roboto Slab";
 }
-
+.container_div{
+  transition: transform ease-in-out 0.5s;
+overflow: hidden;}
+.container_div:hover{
+  transform: scale(0.9);
+  overflow: auto;
+}
+.main-header{
+  z-index: 1;
+}
 /* Resposiveness */
 
 @media screen and (max-width: 480px) {
