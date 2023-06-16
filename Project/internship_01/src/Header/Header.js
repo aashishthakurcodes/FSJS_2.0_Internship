@@ -20,7 +20,7 @@ useEffect(()=>{
   return (
     <div className={`main-header ${scroll ? "sticky-header":" "}`}>
         <div className='navbar  top-0 left-0 w-full z-10 '>
-            <nav className=' navbar flex  h-[75px] justify-around items-center'>
+            <nav className=' navbar  flex  h-[75px] justify-around items-center'>
                 <img className=' w-[80px] rounded-[50%]  h=[42px]' src={logo} alt='logo'/>
                 <ul className='navbar-ul flex gap-10'>
                   <Link to={"/"}>
