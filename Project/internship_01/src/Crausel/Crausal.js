@@ -41,7 +41,7 @@ const Crausal = () => {
   }
 
   return (
-    <div className="p-[50px] bg-black ">
+    <div className="p-[50px] bg-black">
       <Carousel
         className=""
         responsive={responsive}

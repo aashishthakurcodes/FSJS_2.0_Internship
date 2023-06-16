@@ -1,0 +1,22 @@
+.about{
+   background: linear-gradient(to right top, #070708, #100c1a, #1a0e25, #260d2e, #360633);;
+   height: auto ;
+}
+.about-img{
+    width: 800px;
+}
+.about-desc{
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.about-desc h2{
+    font-size: 50px;
+    font-weight: 800;
+}
+.about-desc p{
+    padding: 10px 0px;
+    font-size: 25px;
+}
