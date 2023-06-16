@@ -24,9 +24,9 @@ const About = () => {
         </div>
 
         <div className="flex justify-center items-center flex-col max-w-[900px]">
-          <h1 className="text-[50px] text-purple-600 font-extrabold italic">Advantages of TMDB</h1>
-          <div >
-            <div   className="pt-[15px]">
+          <h1 className="text-[50px] text-purple-600 font-extrabold ">Advantages of TMDB</h1>
+          <div className="">
+            <div   className="advantage pt-[15px]">
               <span className="text-[20px] text-purple-600 pr-[10px] font-extrabold">1</span>
               <span className="text-[20px] font-medium">
                 Every year since 2008, the number of contributions to our
@@ -36,7 +36,7 @@ const About = () => {
               </span>
             </div>
 
-            <div  className="pt-[15px]">
+            <div  className="advantage pt-[15px]">
               <span className="text-[20px] text-purple-600 pr-[10px] font-extrabold">2</span>
               <span  className="text-[20px] font-medium">
                 Along with extensive metadata for movies, TV shows and people,
@@ -46,7 +46,7 @@ const About = () => {
               </span>
             </div>
 
-            <div  className="pt-[15px]">
+            <div  className="advantage pt-[15px]">
               <span className="text-[20px] text-purple-600 pr-[10px] font-extrabold">3</span>
               <span className="text-[20px] font-medium">
                 We're international. While we officially support 39 languages we
@@ -55,7 +55,7 @@ const About = () => {
               </span>
             </div>
 
-            <div  className="pt-[15px]">
+            <div  className="advantage pt-[15px]">
               <span className="text-[20px] text-purple-600 pr-[10px] font-extrabold">4</span>
               <span className="text-[20px] font-medium">
                 Our community is second to none. Between our staff and community

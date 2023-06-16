@@ -3,7 +3,6 @@ import "react-multi-carousel/lib/styles.css";
 import React, { useEffect, useState } from "react";
 import CrausalShimmer from "../Shimmer/CrausalShimmer";
 
-
 const Crausal = () => {
   const [myData, Setdata] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -33,7 +32,7 @@ const Crausal = () => {
     mobile: {
       breakpoint: { max: 464, min: 0 },
       items: 1,
-      slidesToSlide: 1, 
+      slidesToSlide: 1, // optional, default to 1.
     },
   };
 
@@ -42,21 +41,17 @@ const Crausal = () => {
   }
 
   return (
-<<<<<<< HEAD
-    <div className="p-[50px] bg-black">
-=======
-    <div className="main-crausal  bg-black ">
->>>>>>> ea1247fb4fa89d229de8c947bad5c715ad76920b
+    <div className="p-[50px] bg-black ">
       <Carousel
         className=""
         responsive={responsive}
         swipeable={false}
         draggable={false}
-        showDots={false}
+        showDots={true}
       >
         {myData.map((results) => (
-          <div className="crausal flex  justify-center items-center p-[50px]  " key={results.id}>
-          <div className="crausal-content  w-[850px] p-[5px] h-[410px]    flex flex-col justify-end items-center shadow-2xl border-2 border-white-600 rounded-xl">
+          <div className="crausal flex border-4 border-red-600 justify-center items-center bg-black" key={results.id}>
+          <div className="  w-[750px] p-[5px] h-[410px]    flex flex-col justify-end items-center shadow-2xl border-2 border-white-600 rounded-xl">
             <img
               className="w-full h-full"
               src={`https://image.tmdb.org/t/p/w500${results.backdrop_path}`}
