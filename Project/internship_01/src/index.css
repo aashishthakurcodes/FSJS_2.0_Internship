@@ -69,13 +69,11 @@
   transform: translateX(0);
   transition: opacity 500ms, transform 1000ms;
 }
-.navbar{
+.navbar {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
 /* Add any other custom styles to enhance the page */
-
-
 
 /* Header */
 .navbar {
@@ -106,20 +104,21 @@
   height: 410;
   border-radius: 50px;
 }
-.heading{
+.heading {
   font-family: "Aboreto";
 }
-.heading2{
+.heading2 {
   font-family: "Roboto Slab";
 }
-.container_div{
+.container_div {
   transition: transform ease-in-out 0.5s;
-overflow: hidden;}
-.container_div:hover{
+  overflow: hidden;
+}
+.container_div:hover {
   transform: scale(0.9);
   overflow: auto;
 }
-.main-header{
+.main-header {
   z-index: 1;
 }
 /* Resposiveness */
@@ -136,8 +135,14 @@ overflow: hidden;}
   .crausal {
     background: #000;
     width: 100%;
-    height: 300px;
+
     padding: 30px 0px;
+  }
+  .cla {
+    padding: 15px 20px;
+  }
+  .bgr {
+    height: 320px;
   }
   .crausal-content {
     width: 95%;
@@ -159,18 +164,17 @@ overflow: hidden;}
     display: none;
   }
   /* Search input */
-  .input_data{
+  .input_data {
     width: 80%;
     height: 25px;
     color: #000;
   }
-  .search_div{
+  .search_div {
     background-color: rgba(0, 0, 0, 0.4);
   }
   /* Button */
-  .btn{
+  .btn {
     height: 30px;
   }
   /* Container */
-  
 }

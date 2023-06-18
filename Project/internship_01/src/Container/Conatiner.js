@@ -58,7 +58,7 @@ const Conatiner = () => {
       });
   };
   return (
-    <div className="w-full border-green-800 border-8 flex flex-col justify-center items-center bg-black text-white ">
+    <div className="w-full flex flex-col justify-center items-center bg-black text-white ">
       
      <div className="search_div flex flex-col md:flex-row w-full md:w-[30%] mt-2 md:mt-[10px] md:gap-2 items-center justify-center  p-2 md:p-[10px]">
   <input
