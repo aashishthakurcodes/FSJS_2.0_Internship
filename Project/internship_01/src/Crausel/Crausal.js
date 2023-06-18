@@ -50,7 +50,7 @@ const Crausal = () => {
         showDots={true}
       >
         {myData.map((results) => (
-          <div className="crausal flex border-4 border-red-600 justify-center items-center bg-black" key={results.id}>
+          <div className="crausal flex  justify-center items-center bg-black" key={results.id}>
           <div className="  w-[750px] p-[5px] h-[410px]    flex flex-col justify-end items-center shadow-2xl border-2 border-white-600 rounded-xl">
             <img
               className="w-full h-full"
@@ -63,7 +63,6 @@ const Crausal = () => {
             </div>
           </div>
         </div>
-        
         ))}
       </Carousel>
     </div>
