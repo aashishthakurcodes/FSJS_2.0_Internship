@@ -15,4 +15,9 @@
     opacity: 0;
     transition: opacity 500ms;
   }
+  .headingtext{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
   

@@ -58,13 +58,12 @@ const Crausal = () => {
               src={`https://image.tmdb.org/t/p/w500${results.backdrop_path}`}
               alt="bg img"
             />
-            <div className="absolute w-full p-2 md:p-5 flex flex-col justify-center text-center items-center text-slate-200 bg-black bg-opacity-60">
+            <div className="absolute p-2 md:p-5 flex flex-col justify-center text-center items-center text-slate-200 bg-black bg-opacity-60">
               <h1 className="font-serif text-lg md:text-2xl">{results.original_title}</h1>
               <h3 className="font-serif text-sm md:text-lg">Ratings {results.vote_average} ⭐</h3>
             </div>
           </div>
         </div>
-        
         ))}
       </Carousel>
     </div>

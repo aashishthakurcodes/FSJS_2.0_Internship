@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group';
-// import './Moreinfo.css'; // Import the CSS file
+import InfoShimmer from '../Shimmer/InfoShimmer';
 
 const Moreinfo = () => {
   const { id } = useParams();
-  const [info, setInfo] = useState({});
+  const [info, setInfo] = useState([]);
 
   useEffect(() => {
     fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=db9c8f6101242bb4f50b946dd0fc7571`)
@@ -19,11 +19,14 @@ const Moreinfo = () => {
     setIsLoaded(true);
   }, []);
 
+if(info.length===0){
+  return <InfoShimmer/>;
+}
   return (
-    <div className='mt-[70px] bg-black text-white'>
+    <div className=' bg-black text-white'>
       <div className='flex flex-col justify-center items-center container'>
         <CSSTransition in={isLoaded} timeout={500} classNames='fade'>
-          <div className='image-container'>
+          <div className='img1'>
             <img
               src={`https://image.tmdb.org/t/p/w500${info.backdrop_path}`}
               alt="bg img"
@@ -32,18 +35,18 @@ const Moreinfo = () => {
         </CSSTransition>
         <CSSTransition in={isLoaded} timeout={500} classNames='fade'>
           <div className='text-container '>
-            <h1 className={`text-4xl font-bold mt-[10px] slide-effect`}>{info.original_title}</h1>
+            <h1 className={`headingtext text-4xl font-bold mt-[10px] slide-effect`}>{info.original_title}</h1>
           </div>
         </CSSTransition>
         <CSSTransition in={isLoaded} timeout={500} classNames='fade-p'>
-          <p className='text-2xl italic w-[80%] text-center'>{info.overview}</p>
+          <p className=' text-2xl italic w-[80%] text-center'>{info.overview}</p>
         </CSSTransition>
       </div>
 
       <div className='flex flex-col justify-center items-center gap-[20px] mt-[50px]'>
         <CSSTransition in={isLoaded} timeout={500} classNames='fade'>
-          <div className='border-4 border-white p-[2px]'>
-            <div className='image-container'>
+          <div className='border-4 border-white p-[2px] mb-[15px]'>
+            <div className='image2'>
               <img
                 src={`https://image.tmdb.org/t/p/w500${info.poster_path}`}
                 alt="bg img"
