@@ -1,6 +1,11 @@
 .conatct_container{
     background: linear-gradient(to right top, #070708, #100c1a, #1a0e25, #260d2e, #360633);
+<<<<<<< HEAD
     height: 100vh;
+=======
+    padding: 75px 0;
+    height: fit-content;
+>>>>>>> 245d35f663df005e0897ff31757aec6485e10c8c
     color: #ffff;
     display: flex;
     flex-direction: column;
@@ -54,4 +59,21 @@
 .support{
     color: #3FCCD8;
     padding-left: 5px;
+<<<<<<< HEAD
+=======
+}
+
+@media screen and (max-width: 480px){
+   .right{
+    padding: 0 20px;
+
+   } 
+   .right h2{
+    font-size: 20px;
+
+   }
+   .conatct_container{
+    padding: 20px 0;
+   }
+>>>>>>> 245d35f663df005e0897ff31757aec6485e10c8c
 }

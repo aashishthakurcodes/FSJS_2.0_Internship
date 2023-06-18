@@ -1,7 +1,6 @@
 
 import Header from "./Header/Header";
-// import Conatiner from "./Container/Conatiner";
-// import Crausal from "./Crausel/Crausal";
+import Footer from "./Footer/Footer";
 import {Outlet} from "react-router-dom";
 import Footer from "./Footer/Footer";
 

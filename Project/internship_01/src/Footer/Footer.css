@@ -1,4 +1,5 @@
 .btn-footer{
+<<<<<<< HEAD
   padding: 10px 8px;
   background: #ffff;
   color: rgb(63, 96, 122);
@@ -20,3 +21,26 @@
     gap: 20px;
   }
 }
+=======
+    padding: 10px 8px;
+    background: #ffff;
+    color: rgb(63, 96, 122);
+    margin-top: 8px;
+    font-weight: 400;
+    border: none;
+    border-radius: 10px;
+  }
+  .btn-footer:hover{
+    color: #ffff;
+    background: rgb(124, 186, 236);
+  }
+  @media screen and (max-width:480px) {
+    .footer-container{
+      flex-direction: column;
+      gap: 20px;
+    }
+    .ul-footer{
+      gap: 20px;
+    }
+  }
+>>>>>>> 245d35f663df005e0897ff31757aec6485e10c8c
