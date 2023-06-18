@@ -26,14 +26,17 @@
     padding: 5px 15px;
 }
 @media screen and (max-width: 480px){
+    .about{
+        padding-top: 10px;
+    }
     .about-img{
         width: 600px;
     }
     .about-desc{
-        max-width: 600px;
+        max-width: 400px;
     }
     .about-desc h2{
-        font-size: 35px;
+        font-size: 33px;
         font-weight: 500;
     }
     .about-desc p{
