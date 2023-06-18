@@ -142,18 +142,20 @@
     padding: 15px 20px;
   }
   .bgr {
-    height: 320px;
+    height: 300px;
   }
   .crausal-content {
     width: 95%;
     height: 300px;
   }
 
-  .navbar {
+  .navbar_2 {
+    /* border: 2px solid red; */
     height: 50px;
     justify-content: space-between;
-    padding: 0 15px;
-    background-color: rgba(0, 0, 0, 0.5);
+    
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
   }
 
   .navbar img {
@@ -165,12 +167,14 @@
   }
   /* Search input */
   .input_data {
-    width: 80%;
+    width: 75%;
     height: 25px;
     color: #000;
+    
   }
   .search_div {
     background-color: rgba(0, 0, 0, 0.4);
+
   }
   /* Button */
   .btn {
