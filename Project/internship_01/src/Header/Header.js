@@ -21,7 +21,8 @@ useEffect(()=>{
     <div className={`main-header ${scroll ? "sticky-header":" "}`}>
         <div className='navbar  top-0 left-0 w-full z-10 '>
             <nav className=' navbar_2  flex  h-[75px] justify-around items-center'>
-                <img className=' w-[80px] rounded-[50%]  h=[42px]' src={logo} alt='logo'/>
+              <Link to={"/"}>
+                <img className=' w-[80px] rounded-[50%]  h=[42px]' src={logo} alt='logo'/> </Link>
                 <ul className='navbar-ul flex gap-10'>
                   <Link to={"/"}>
                     <li>Home</li>
@@ -35,8 +36,6 @@ useEffect(()=>{
                 <button className='login bg-red-700 p-[5px] text-white'>Login</button>
             </nav>
         </div>
-
-       
     </div>
   )
 }

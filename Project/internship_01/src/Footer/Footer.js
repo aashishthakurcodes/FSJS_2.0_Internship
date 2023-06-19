@@ -65,8 +65,4 @@ const Footer = () => {
   );
 };
 
-<<<<<<< HEAD
 export default Footer;
-=======
-export default Footer;
->>>>>>> 245d35f663df005e0897ff31757aec6485e10c8c
