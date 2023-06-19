@@ -1,4 +1,3 @@
-
 import React from "react";
 import "./reload.css"
 
@@ -49,4 +48,6 @@ const Shimmer = () => {
         )
     }
 
-export default Show_Shimmer;
+export default Show_Shimmer
+
+

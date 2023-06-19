@@ -1,4 +1,3 @@
-
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Result from "../Shimmer/Result";
@@ -154,4 +153,4 @@ const Conatiner = () => {
     </div>
   );
 };
-export default Conatiner;                                                     
+export default Conatiner;
