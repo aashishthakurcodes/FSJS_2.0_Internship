@@ -1,0 +1,44 @@
+
+.image-container{
+    height: 250px;
+    width: 450px;
+    background: hsl(0, 11%, 86%);
+    padding: 10px;
+}
+.image-container2{
+    height: 500px;
+    width: 350px;
+    background: hsl(0, 11%, 86%);
+    margin: 20px;
+    border-radius: 10px;
+}
+.para{
+    height: 250px;
+    width: 650px;
+    background: #9e9a9a;
+    margin-top: 20px;
+    border-radius: 10px;
+    
+}
+@media screen and (max-width:480px) {
+    .image-container{
+        width: 340px ;
+        height: 220px;
+    }
+    .para{
+        width: 300px;
+        background: #9e9595;
+    }
+    .image-container2{
+        width: 310px;
+    }
+    .image2{
+        width: 310px;
+    }
+    .img1{
+        width: 310px;
+    }
+    .headingtext{
+        font-size: 22px;
+    }
+}
