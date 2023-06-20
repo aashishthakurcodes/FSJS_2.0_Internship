@@ -2,6 +2,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import React, { useEffect, useState } from "react";
 import CrausalShimmer from "../Shimmer/CrausalShimmer";
+import { Link } from "react-router-dom";
 
 const Crausal = () => {
   const [myData, Setdata] = useState([]);
@@ -50,7 +51,7 @@ const Crausal = () => {
         
       >
         {myData.map((results) => (
-          <div className="crausal flex  justify-center items-center bg-black" key={results.id}>
+          <Link  to={"/moreinfo/" + results.id} ><div className="crausal flex  justify-center items-center bg-black" key={results.id}>
           <div className="bgr w-[750px] p-[5px] h-[410px]    flex flex-col justify-end items-center shadow-2xl border-2 border-white-600 rounded-xl">
             <img
               className="w-full h-full"
@@ -63,6 +64,8 @@ const Crausal = () => {
             </div>
           </div>
         </div>
+        </Link>
+ 
         ))}
       </Carousel>
     </div>
