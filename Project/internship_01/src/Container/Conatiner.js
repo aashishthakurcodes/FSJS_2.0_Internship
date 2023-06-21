@@ -151,6 +151,6 @@ const Conatiner = () => {
         ))}
       </div>
     </div>
-  );
-};
+  )
+}
 export default Conatiner;

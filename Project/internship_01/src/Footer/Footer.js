@@ -1,14 +1,15 @@
 import React from "react";
 import logo from "../Header/Assets/blue_square_2-d537fb228cf3ded904ef09b136fe3fec72548ebc1fea3fbbd1ad9e36364db38b.svg";
 import { Link } from "react-router-dom";
-import "./Footer.css"
+import "./Footer.css";
+
 
 const Footer = () => {
   return (
     <div className="footer_main ">
       <footer>
-        <div className="footer-container flex justify-center items-center gap-[40px] p-[20px] bg-[#252E7E] text-white">
-          <div>
+        <div className="footer-container flex justify-center items-center gap-[40px] p-[20px] bg-[#686463] text-white">
+          <div className="flex justify-center items-center flex-col">
             <img className="w-[80px]" src={logo} alt=" " />
             <Link to={"https://www.themoviedb.org/signup"}> <button className="btn-footer">Join the communtiy</button></Link>
 
